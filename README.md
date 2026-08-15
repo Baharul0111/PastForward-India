@@ -2,7 +2,9 @@
 
 **Point at history. Watch time move.**
 
-Turn any Indian subject — a monument, a lake, a tiger — into a 58-second vertical documentary reel, narrated and scored, built mostly from real archival material.
+A location-based history storyteller. Stand in front of an Indian monument, fort, temple, palace, heritage site or historically significant place — type its name or photograph it — and PastForward produces a **58-second vertical documentary** about the exact place you're standing in.
+
+> **Not "AI imagining history."** A mini historical documentary, assembled the way a human history editor would assemble one.
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18.3-blue)](https://react.dev/)
@@ -22,11 +24,35 @@ Turn any Indian subject — a monument, a lake, a tiger — into a 58-second ver
 
 ## What it does
 
-Type the name of an Indian subject, or upload a photo of one, and the app produces a 58-second vertical video about it.
+A visitor either **types the place name** or **photographs what is in front of them**. PastForward then:
 
-The reel is assembled from **real historical material** — 19th-century photographs, lithographs, aquatints and survey plates pulled live from Wikimedia Commons, each credited with its licence. Only about **8 of the 58 seconds** are AI-generated video, and those two windows are labelled `HISTORICAL RECONSTRUCTION` on screen and listed by timecode in a "How do we know this?" card. Every fact comes from the Wikipedia article the reel cites.
+1. **Identifies** the site from the photo or the name
+2. **Researches** it against trustworthy historical sources
+3. **Finds the few events that actually explain** why the place exists and how it changed — not a list of facts, a causal chain
+4. **Produces a fast, cinematic timeline**: what stood there before · why it was built · who built it · what the earliest version looked like · how later rulers and events modified it · how it became what the visitor sees today
 
-While it builds, the wait screen asks you eight short, tap-only questions written for that specific subject — a tiger reel asks whether you've seen one in the wild; a fort asks if you've climbed one before.
+### The crucial difference
+
+PastForward does **not** generate 58 seconds of obviously synthetic video. It behaves like a human history editor:
+
+| | |
+|---|---|
+| **Real photographs and archival material** | wherever it exists — 19th-century photographs, lithographs, aquatints and survey plates, pulled live from Wikimedia Commons |
+| **Maps and typography** | created programmatically — the timeline bar, year stamps, captions and end card are code, not generated imagery |
+| **Selective AI reconstruction** | **only** for moments that could never have been photographed — two windows, ~8 of the 58 seconds, each labelled `HISTORICAL RECONSTRUCTION` on screen |
+| **Narration, sound design, citations** | a written script read at natural pace, a ducked score, per-shot sound, and every source credited with its licence |
+| **A consistent visual language** | one grade, one grain, one type system, one motion grammar across every reel |
+
+Every fact comes from the article the reel cites. The two reconstruction windows are listed **by timecode** in the "How do we know this?" card, so a viewer can always tell exactly which seconds were imagined and which were photographed.
+
+The result is a mini historical documentary generated for the exact place you're standing in.
+
+While it builds, the wait screen asks eight short, tap-only questions written for that specific subject — a fort asks whether you've climbed one before; a tiger reel asks if you've seen one in the wild.
+
+### Two changes from the original brief
+
+- **Length: 25–30s → 58s.** The 28-second cut forced roughly 1.35× time-compression onto nearly every narration line, and it was audible. Doubling the template let the voice run at natural pace, which matters more than brevity for something that is meant to sound like a documentary.
+- **Scope: monuments → any Indian subject.** The same 8-beat skeleton turned out to hold for lakes, rivers and wildlife, so the domain was broadened. Only the *content* of each beat changes by category (below); the structure, the sourcing standard and the reconstruction honesty rule are identical.
 
 ### From prompt to reel
 
@@ -43,15 +69,17 @@ While it builds, the wait screen asks you eight short, tap-only questions writte
   </tr>
 </table>
 
-**It works for more than monuments.** The pipeline classifies the subject and changes the story beats to match:
+The pipeline classifies the subject and changes the story beats to match, because a lake has no founder and a tiger has no architect:
 
 | Category | Story spine |
 |---|---|
-| `monument` / `building` | built → changed → damaged → restored → today |
-| `natural_place` | formed → found → used → changed → today |
+| `monument` / `building` | built → changed → damaged/challenged → restored → today |
+| `natural_place` | formed → found → used → changed/threatened → today |
 | `animal` | evolved → ranged → hunted/lost → protected → today |
 
-Animal reconstructions are rendered as **19th-century natural-history plates, never photorealistic wildlife** — a photoreal animal that never existed would be fabricated evidence; a lithograph is openly an illustration.
+The archival vocabulary changes with it: a fort is searched under colonial-era exonyms and photographers (*Seringapatam*, *Samuel Bourne*, *Felice Beato*), a lake under topographical watercolours and survey maps, an animal under 19th-century natural-history monographs.
+
+Animal reconstructions are rendered as **19th-century natural-history plates, never photorealistic wildlife** — the same honesty rule applied to a living subject. A photoreal animal that never existed would be fabricated evidence; a lithograph is openly an illustration.
 
 ---
 
