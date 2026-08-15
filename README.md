@@ -15,10 +15,15 @@ A location-based history storyteller. Stand in front of an Indian monument, fort
 **Version:** `0.1.0` · **Android:** `1.0` (versionCode 1) · app id `in.pastforward.app`
 
 <p align="center">
-  <img src="docs/images/pastforward-home-desktop.png" alt="PastForward India home screen on desktop" width="960">
+  <a href="docs/demo.mp4?raw=1">
+    <img src="docs/images/pastforward-home-desktop.png" alt="Watch the PastForward India demo" width="960">
+  </a>
 </p>
 
-<p align="center"><sub>Name a subject or show it to the camera to begin.</sub></p>
+<p align="center">
+  <a href="docs/demo.mp4?raw=1"><strong>▶ Watch the full demo (2:09)</strong></a><br>
+  <sub>Name a subject or show it to the camera to begin.</sub>
+</p>
 
 ---
 

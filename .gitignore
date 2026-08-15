@@ -26,6 +26,10 @@ dist/
 # (~600 MB here) and would blow past GitHub's file limits. A fresh clone
 # regenerates whatever it needs.
 # ---------------------------------------------------------------
+# Keep the original high-resolution demo recording local. The optimized,
+# web-ready copy used by the README lives at docs/demo.mp4.
+/demo.mov
+
 # Ignore the CONTENTS, not the directories — git will not descend into a
 # fully-ignored directory, so the .gitkeep negations below would never match.
 public/reels/*
