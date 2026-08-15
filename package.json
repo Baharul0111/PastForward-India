@@ -1,0 +1,47 @@
+{
+  "name": "pastforward-india",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:lan": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "studio": "remotion studio remotion/index.ts",
+    "render": "tsx scripts/render.ts",
+    "verify:models": "tsx scripts/verify-models.ts",
+    "mocks": "tsx scripts/make-mocks.ts",
+    "assets": "tsx scripts/fetch-assets.ts",
+    "research": "tsx scripts/research.ts",
+    "plan": "tsx scripts/plan.ts",
+    "vo": "tsx scripts/regen-vo.ts",
+    "android:sync": "cap sync android",
+    "android:apk": "cd android && ./gradlew assembleDebug",
+    "android:install": "adb install -r android/app/build/outputs/apk/debug/app-debug.apk"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/camera": "^6.1.3",
+    "@capacitor/core": "^6.2.1",
+    "next": "^14.2.35",
+    "openai": "^4.68.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.1",
+    "@remotion/bundler": "^4.0.220",
+    "@remotion/cli": "4.0.220",
+    "@remotion/google-fonts": "4.0.220",
+    "@remotion/renderer": "4.0.220",
+    "@types/node": "^20.14.0",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "remotion": "4.0.220",
+    "sharp": "^0.33.5",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.0"
+  },
+  "description": "Turn any Indian subject into a 58-second vertical documentary reel."
+}

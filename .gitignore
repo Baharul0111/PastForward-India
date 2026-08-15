@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------
+# Secrets — NEVER commit these
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.keystore
+
+# ---------------------------------------------------------------
+# Dependencies & build output
+# ---------------------------------------------------------------
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# ---------------------------------------------------------------
+# Generated media and cache
+#
+# These are PRODUCED by running the app, not source. They are also large
+# (~600 MB here) and would blow past GitHub's file limits. A fresh clone
+# regenerates whatever it needs.
+# ---------------------------------------------------------------
+# Ignore the CONTENTS, not the directories — git will not descend into a
+# fully-ignored directory, so the .gitkeep negations below would never match.
+public/reels/*
+public/assets/*
+cache/*
+
+# Keep the folders themselves so a fresh clone has somewhere to write
+!public/reels/.gitkeep
+!public/assets/.gitkeep
+!cache/.gitkeep
+
+# ---------------------------------------------------------------
+# Android
+# ---------------------------------------------------------------
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/
+*.apk
+*.aab
+
+# ---------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.log
+npm-debug.log*
+yarn-error.log*

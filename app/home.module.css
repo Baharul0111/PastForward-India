@@ -1,0 +1,297 @@
+.main {
+  min-height: 100dvh;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 40px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* ---------- top ---------- */
+.top {
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.8px;
+  line-height: 1.05;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.tagline {
+  margin: 12px 0 0;
+  color: var(--ink-dim);
+  font-size: 11px;
+  letter-spacing: 3.4px;
+  font-weight: 500;
+}
+
+/* ---------- center ---------- */
+.center {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------- the two equal inputs ----------
+   Naming it and showing it are the SAME journey (identify → generate), so the
+   two blocks are structurally identical: label, body, full-width action button.
+   Neither is a fallback for the other; only the fill colour differs. */
+.paths {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.path {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 15px 14px 14px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.pathLabel {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.6px;
+  color: var(--ink-dim);
+}
+
+/* fixed height on both bodies keeps the two blocks the same size */
+.pathBody {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+}
+
+.pathHint {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.42;
+  color: var(--ink-dim);
+}
+
+.action {
+  width: 100%;
+  min-height: 52px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--sans);
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+.actionPhoto {
+  background: var(--ink);
+}
+
+.action:active {
+  transform: scale(0.985);
+}
+
+.action:disabled {
+  opacity: 0.55;
+}
+
+.cameraGlyph {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--ink-dim);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.or span {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.input {
+  width: 100%;
+  padding: 15px 16px;
+  font-size: 16.5px;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+/* the placeholder carries three example subjects — one monument, one lake, one
+   animal — so it must fit a 375px screen without clipping */
+.input::placeholder {
+  color: #5f584c;
+  font-size: 14px;
+}
+
+.input:focus {
+  border-color: var(--accent-dim);
+}
+
+.input:disabled {
+  opacity: 0.6;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.chip {
+  padding: 8px 13px;
+  font-size: 12.5px;
+  font-family: var(--sans);
+  color: var(--ink-dim);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.chip:hover {
+  color: var(--ink);
+  border-color: var(--accent-dim);
+}
+
+.error {
+  color: #d9744a;
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
+}
+
+/* ---------- bottom ---------- */
+.bottom {
+  text-align: center;
+}
+
+.langLabel {
+  color: #5f584c;
+  font-size: 10px;
+  letter-spacing: 2.6px;
+  margin: 0 0 10px;
+}
+
+.langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+}
+
+.lang {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-family: var(--sans);
+  color: var(--ink-dim);
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.langOn {
+  color: var(--bg);
+  background: var(--ink);
+  border-color: var(--ink);
+  font-weight: 600;
+}
+
+.disclosure {
+  color: #4d473e;
+  font-size: 10.5px;
+  margin: 16px 0 0;
+  line-height: 1.5;
+}
+
+.identifying {
+  text-align: center;
+  color: var(--accent);
+  font-size: 14px;
+  margin: 0;
+}
+
+.confirm {
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.confirmTitle {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.confirmOpt {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 8px;
+  padding: 13px 15px;
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 15.5px;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.confirmOpt:hover {
+  border-color: var(--accent-dim);
+}
+
+.confirmCity {
+  color: var(--ink-dim);
+  font-size: 13px;
+}
+
+.confirmSkip {
+  display: block;
+  margin: 4px auto 0;
+  padding: 8px;
+  background: none;
+  border: none;
+  color: #5f584c;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  cursor: pointer;
+}

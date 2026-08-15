@@ -1,0 +1,140 @@
+{
+  "monument": {
+    "name": "Qutub Minar",
+    "city": "Delhi",
+    "state": "Delhi",
+    "slug": "qutub-minar"
+  },
+  "language": "en",
+  "hook": "This tower took several rulers to finish.",
+  "takeaway": "One tower. Several rulers. Eight centuries.",
+  "timeline": {
+    "startYear": "1199",
+    "events": [
+      { "year": "1199", "label": "Aibak begins the minar" },
+      { "year": "1220s", "label": "Iltutmish adds three storeys" },
+      { "year": "1368", "label": "Firoz Shah Tughlaq rebuilds" },
+      { "year": "1803", "label": "Earthquake damage repaired" },
+      { "year": "2026", "label": "You are standing here" }
+    ]
+  },
+  "narrationWordCount": 69,
+  "sources": [
+    { "title": "Qutb Minar — Wikipedia", "url": "https://en.wikipedia.org/wiki/Qutb_Minar" },
+    { "title": "Qutb Minar and its Monuments, Delhi — UNESCO World Heritage Centre", "url": "https://whc.unesco.org/en/list/233/" },
+    { "title": "Archaeological Survey of India", "url": "https://asi.nic.in/" }
+  ],
+  "shots": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "end": 2.5,
+      "type": "USER_PHOTO",
+      "narration": "This tower took several rulers to finish.",
+      "caption": { "text": "Standing since the 1190s" },
+      "visual": {
+        "kenBurns": { "direction": "in", "strength": 0.14 },
+        "grade": "modern"
+      },
+      "sfx": "ambient"
+    },
+    {
+      "id": 2,
+      "start": 2.5,
+      "end": 6.0,
+      "type": "ARCHIVAL",
+      "narration": "Qutb-ud-din Aibak began it around 1199, marking Delhi's new sultanate.",
+      "caption": { "year": "1199", "text": "Construction begins in Delhi" },
+      "visual": {
+        "archivalQuery": "Qutub Minar Delhi 19th century photograph",
+        "kenBurns": { "direction": "out", "strength": 0.16 },
+        "grade": "archival"
+      },
+      "sfx": "market"
+    },
+    {
+      "id": 3,
+      "start": 6.0,
+      "end": 10.0,
+      "type": "RECONSTRUCTION",
+      "narration": "Only its first storey was finished under him.",
+      "caption": { "year": "c. 1200", "text": "One storey, red sandstone" },
+      "visual": {
+        "stillPrompt": "Late twelfth century Delhi. The first storey of a tall red sandstone tower stands alone on a dusty plain, its surface freshly carved with deep fluting and bands of inscription. Wooden scaffolding leans against the stone. A few stonemasons in simple Sultanate-era robes work at ground level, seen from behind and at a distance. Low morning light rakes across the sandstone; dust hangs in the air.",
+        "motionPrompt": "a very slow push in toward the carved base of the tower",
+        "kenBurns": { "direction": "left", "strength": 0.12 },
+        "grade": "reconstruction"
+      },
+      "sfx": "stone"
+    },
+    {
+      "id": 4,
+      "start": 10.0,
+      "end": 14.0,
+      "type": "ARCHIVAL",
+      "narration": "His successor Iltutmish added three more storeys above it.",
+      "caption": { "year": "1220s", "text": "The tower grows taller" },
+      "visual": {
+        "archivalQuery": "Qutub Minar engraving Delhi 1800s",
+        "kenBurns": { "direction": "in", "strength": 0.18 },
+        "grade": "parchment"
+      },
+      "sfx": "whoosh"
+    },
+    {
+      "id": 5,
+      "start": 14.0,
+      "end": 18.0,
+      "type": "RECONSTRUCTION",
+      "narration": "The tower grew tall — sandstone below, marble and sandstone above.",
+      "caption": { "year": "c. 1230", "text": "Five storeys reach upward" },
+      "visual": {
+        "stillPrompt": "Thirteenth century Delhi. A tall tapering minaret of five storeys rises above a walled mosque courtyard, the lower storeys in deep red sandstone with heavy fluting, the upper storeys in pale marble banded with sandstone. Small distant figures cross the courtyard below, giving scale. Late afternoon light, long shadows across worn stone paving.",
+        "motionPrompt": "a slow controlled tilt upward from the base of the tower to its top",
+        "kenBurns": { "direction": "right", "strength": 0.12 },
+        "grade": "reconstruction"
+      },
+      "sfx": "stone"
+    },
+    {
+      "id": 6,
+      "start": 18.0,
+      "end": 22.0,
+      "type": "ARCHIVAL",
+      "narration": "Lightning damaged the top; Firoz Shah Tughlaq rebuilt it.",
+      "caption": { "year": "1368", "text": "Lightning strikes the top" },
+      "visual": {
+        "archivalQuery": "Qutub Minar painting Delhi ruins Company School",
+        "kenBurns": { "direction": "out", "strength": 0.16 },
+        "grade": "archival"
+      },
+      "sfx": "whoosh"
+    },
+    {
+      "id": 7,
+      "start": 22.0,
+      "end": 26.0,
+      "type": "MATCH_CUT",
+      "narration": "Centuries of building, damage and repair made what stands here.",
+      "caption": { "year": "2026", "text": "What you see today" },
+      "visual": {
+        "kenBurns": { "direction": "in", "strength": 0.1 },
+        "grade": "modern"
+      },
+      "sfx": "whoosh"
+    },
+    {
+      "id": 8,
+      "start": 26.0,
+      "end": 28.0,
+      "type": "END_CARD",
+      "narration": "One tower. Several rulers. Eight centuries.",
+      "caption": { "year": "2026", "text": "One tower, eight centuries" },
+      "visual": {
+        "kenBurns": { "direction": "in", "strength": 0.05 },
+        "grade": "modern"
+      },
+      "sfx": "none"
+    }
+  ]
+}
