@@ -35,24 +35,20 @@ A visitor either **types the place name** or **photographs what is in front of t
 
 PastForward does **not** generate 58 seconds of obviously synthetic video. It behaves like a human history editor:
 
-| | |
-|---|---|
-| **Real photographs and archival material** | wherever it exists — 19th-century photographs, lithographs, aquatints and survey plates, pulled live from Wikimedia Commons |
-| **Maps and typography** | created programmatically — the timeline bar, year stamps, captions and end card are code, not generated imagery |
-| **Selective AI reconstruction** | **only** for moments that could never have been photographed — two windows, ~8 of the 58 seconds, each labelled `HISTORICAL RECONSTRUCTION` on screen |
-| **Narration, sound design, citations** | a written script read at natural pace, a ducked score, per-shot sound, and every source credited with its licence |
-| **A consistent visual language** | one grade, one grain, one type system, one motion grammar across every reel |
+
+|                                            |                                                                                                                                                        |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Real photographs and archival material** | wherever it exists — 19th-century photographs, lithographs, aquatints and survey plates, pulled live from Wikimedia Commons                           |
+| **Maps and typography**                    | created programmatically — the timeline bar, year stamps, captions and end card are code, not generated imagery                                       |
+| **Selective AI reconstruction**            | **only** for moments that could never have been photographed — two windows, ~8 of the 58 seconds, each labelled `HISTORICAL RECONSTRUCTION` on screen |
+| **Narration, sound design, citations**     | a written script read at natural pace, a ducked score, per-shot sound, and every source credited with its licence                                      |
+| **A consistent visual language**           | one grade, one grain, one type system, one motion grammar across every reel                                                                            |
 
 Every fact comes from the article the reel cites. The two reconstruction windows are listed **by timecode** in the "How do we know this?" card, so a viewer can always tell exactly which seconds were imagined and which were photographed.
 
 The result is a mini historical documentary generated for the exact place you're standing in.
 
 While it builds, the wait screen asks eight short, tap-only questions written for that specific subject — a fort asks whether you've climbed one before; a tiger reel asks if you've seen one in the wild.
-
-### Two changes from the original brief
-
-- **Length: 25–30s → 58s.** The 28-second cut forced roughly 1.35× time-compression onto nearly every narration line, and it was audible. Doubling the template let the voice run at natural pace, which matters more than brevity for something that is meant to sound like a documentary.
-- **Scope: monuments → any Indian subject.** The same 8-beat skeleton turned out to hold for lakes, rivers and wildlife, so the domain was broadened. Only the *content* of each beat changes by category (below); the structure, the sourcing standard and the reconstruction honesty rule are identical.
 
 ### From prompt to reel
 
@@ -71,11 +67,12 @@ While it builds, the wait screen asks eight short, tap-only questions written fo
 
 The pipeline classifies the subject and changes the story beats to match, because a lake has no founder and a tiger has no architect:
 
-| Category | Story spine |
-|---|---|
+
+| Category                | Story spine                                                 |
+| ----------------------- | ----------------------------------------------------------- |
 | `monument` / `building` | built → changed → damaged/challenged → restored → today |
-| `natural_place` | formed → found → used → changed/threatened → today |
-| `animal` | evolved → ranged → hunted/lost → protected → today |
+| `natural_place`         | formed → found → used → changed/threatened → today      |
+| `animal`                | evolved → ranged → hunted/lost → protected → today      |
 
 The archival vocabulary changes with it: a fort is searched under colonial-era exonyms and photographers (*Seringapatam*, *Samuel Bourne*, *Felice Beato*), a lake under topographical watercolours and survey maps, an animal under 19th-century natural-history monographs.
 
@@ -151,20 +148,21 @@ Type a subject — `Qutub Minar`, `Bengal tiger`, `Dal Lake` — or upload a pho
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `npm run dev` | Start the app on port 3000 |
-| `npm run dev:lan` | Same, bound to `0.0.0.0` so phones on your Wi-Fi can reach it |
-| `npm run build` | Production build (stop `dev` first — they share `.next`) |
-| `npm start` | Serve the production build |
-| `npm run verify:models` | Check your key can reach every model the app needs |
-| `npm run plan -- --name="Hampi"` | Generate a plan only |
-| `npm run assets -- --slug=hampi --lang=en --media` | Fetch/generate media for a cached plan |
-| `npm run assets -- --probe="Hampi Greenlaw 1856"` | Inspect how Commons ranks a search — free, no writes |
-| `npm run vo -- --slug=hampi --lang=en` | Re-record narration only |
-| `npm run render -- --props=cache/plans/hampi-en.render.json --out=public/reels/hampi-en.mp4` | Render a reel |
-| `npm run studio` | Open Remotion Studio to inspect the composition |
-| `npm run mocks` | Regenerate the $0 fixture assets |
+
+| Command                                                                                      | What it does                                                 |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `npm run dev`                                                                                | Start the app on port 3000                                   |
+| `npm run dev:lan`                                                                            | Same, bound to`0.0.0.0` so phones on your Wi-Fi can reach it |
+| `npm run build`                                                                              | Production build (stop`dev` first — they share `.next`)     |
+| `npm start`                                                                                  | Serve the production build                                   |
+| `npm run verify:models`                                                                      | Check your key can reach every model the app needs           |
+| `npm run plan -- --name="Hampi"`                                                             | Generate a plan only                                         |
+| `npm run assets -- --slug=hampi --lang=en --media`                                           | Fetch/generate media for a cached plan                       |
+| `npm run assets -- --probe="Hampi Greenlaw 1856"`                                            | Inspect how Commons ranks a search — free, no writes        |
+| `npm run vo -- --slug=hampi --lang=en`                                                       | Re-record narration only                                     |
+| `npm run render -- --props=cache/plans/hampi-en.render.json --out=public/reels/hampi-en.mp4` | Render a reel                                                |
+| `npm run studio`                                                                             | Open Remotion Studio to inspect the composition              |
+| `npm run mocks`                                                                              | Regenerate the $0 fixture assets                             |
 
 ---
 
@@ -208,12 +206,13 @@ You don't need the APK at all — just open `http://<your-ip>:3000` in the phone
 
 Every OpenAI call goes through one file (`lib/openai.ts`) that checks affordability against `BUDGET_HARD_STOP` **before** spending and appends to a ledger at `cache/budget.json` after.
 
-| | |
-|---|---|
-| First reel for a new subject | **~$0.95** (two Sora clips are $0.80 of it) |
-| Every replay | **$0.00** |
-| Adding a language to an existing reel | **~$0.02** |
-| Running with `ALLOW_MEDIA=false` | **$0.00** |
+
+|                                       |                                             |
+| ------------------------------------- | ------------------------------------------- |
+| First reel for a new subject          | **~$0.95** (two Sora clips are $0.80 of it) |
+| Every replay                          | **$0.00**                                   |
+| Adding a language to an existing reel | **~$0.02**                                  |
+| Running with`ALLOW_MEDIA=false`       | **$0.00**                                   |
 
 ---
 
