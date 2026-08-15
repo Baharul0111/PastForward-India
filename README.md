@@ -12,6 +12,12 @@ Turn any Indian subject — a monument, a lake, a tiger — into a 58-second ver
 
 **Version:** `0.1.0` · **Android:** `1.0` (versionCode 1) · app id `in.pastforward.app`
 
+<p align="center">
+  <img src="docs/images/pastforward-home-desktop.png" alt="PastForward India home screen on desktop" width="960">
+</p>
+
+<p align="center"><sub>Name a subject or show it to the camera to begin.</sub></p>
+
 ---
 
 ## What it does
@@ -21,6 +27,21 @@ Type the name of an Indian subject, or upload a photo of one, and the app produc
 The reel is assembled from **real historical material** — 19th-century photographs, lithographs, aquatints and survey plates pulled live from Wikimedia Commons, each credited with its licence. Only about **8 of the 58 seconds** are AI-generated video, and those two windows are labelled `HISTORICAL RECONSTRUCTION` on screen and listed by timecode in a "How do we know this?" card. Every fact comes from the Wikipedia article the reel cites.
 
 While it builds, the wait screen asks you eight short, tap-only questions written for that specific subject — a tiger reel asks whether you've seen one in the wild; a fort asks if you've climbed one before.
+
+### From prompt to reel
+
+<table>
+  <tr>
+    <th width="33%">1. Choose a subject</th>
+    <th width="33%">2. Follow the build</th>
+    <th width="33%">3. Watch history move</th>
+  </tr>
+  <tr>
+    <td><img src="docs/images/pastforward-home-mobile.png" alt="PastForward India mobile home screen with text and camera input options"></td>
+    <td><img src="docs/images/pastforward-qutub-generation.png" alt="Qutub Minar reel generation progress screen with an interactive question"></td>
+    <td><img src="docs/images/pastforward-qutub-reel.png" alt="Completed Qutub Minar historical reel playing in PastForward India"></td>
+  </tr>
+</table>
 
 **It works for more than monuments.** The pipeline classifies the subject and changes the story beats to match:
 
